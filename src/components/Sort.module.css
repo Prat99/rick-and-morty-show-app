@@ -1,0 +1,31 @@
+.sortContainer {
+    margin-top: 1.7rem;
+   
+}
+
+.sortContainer select {
+    width: 100%;
+    max-width: 10rem;
+}
+
+
+@media screen and (min-width: 320px) {
+    .sortContainer select {
+        width: 100%;
+        max-width: 100%;
+    }  
+}
+
+@media screen and (min-width: 768px) {
+    .sortContainer select {
+        width: 100%;
+        max-width: 10rem;
+    } 
+}
+
+@media screen and (min-width: 1024px) {
+    .sortContainer select {
+        width: 100%;
+        max-width: 10rem;
+    }
+}

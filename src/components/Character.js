@@ -1,20 +1,34 @@
 import React from 'react';
-import styles from './Character.module.css'
+import styles from './Character.module.css';
 
 const Character = ({
+  id,
   name,
   status,
   species,
-  type,
   gender,
   image,
   origin,
-  location
+  location,
+  created
 }) => {
+  function calculateYears(timestamp) {
+    const actualYear =   new Date(timestamp).getFullYear();
+    const getCurrentYear = new Date().getFullYear();
+    return getCurrentYear - actualYear;
+  }
   return (
     <>
       <div className={`card ${styles.cardClass}`}>
-        <img class="card-img-top" src={image} alt={name} />
+        <div className={`card-top ${styles.cardTopClass}`}>
+          <img className="card-img-top" src={image} alt={name} />
+          <div className={styles.overlayText}>
+            <p>{name}</p>
+            <p>{`id: ${id} - created ${calculateYears(
+             created
+            )} years ago`}</p>
+          </div>
+        </div>
         <div className={`card-body ${styles.chCardBody}`}>
           <p className={styles.chInfoClass}>
             <span>STATUS</span>

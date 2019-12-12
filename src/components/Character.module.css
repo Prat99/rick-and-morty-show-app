@@ -1,0 +1,21 @@
+.cardClass {
+  background: #303033;
+}
+
+.chCardBody p {
+  border-bottom: 1px solid #efefef;
+  margin-top: 0rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.chCardBody p span:nth-child(odd) {
+  text-align: left;
+}
+
+.chCardBody p span:nth-child(even) {
+  text-align: right;
+}

@@ -11,7 +11,6 @@ const Sort = ({sortCharactersHandler}) => {
   }
     return (
         <div className={styles.sortContainer}>
-          
             <select value={value} onChange={e => sortHandler(e.target)}>
             <option value='' disabled hidden>Sort By Id</option>
             <option value='asc'>Ascending</option>

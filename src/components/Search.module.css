@@ -1,25 +1,41 @@
 .searchContainer input {
   width: 100%;
+}
+
+.searchContainer .inputWrapper {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  width: 100%;
   max-width: 18rem;
 }
 
+.searchIcon {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+}
+
 @media screen and (min-width: 320px) {
-  .searchContainer input {
+  .searchContainer .inputWrapper {
     width: 100%;
     max-width: 100%;
+    text-align: left;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .searchContainer input {
+  .searchContainer .inputWrapper {
     width: 100%;
     max-width: 10rem;
+    text-align: left;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .searchContainer input {
+  .searchContainer .inputWrapper {
     width: 100%;
     max-width: 18rem;
+    text-align: left;
   }
 }

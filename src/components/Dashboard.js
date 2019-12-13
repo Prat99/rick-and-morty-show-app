@@ -7,7 +7,7 @@ import Sort from './Sort';
 const Dashboard = () => {
   const [state, setCharacters] = useState({
     characters: [],
-    allCharacters: []
+    allCharacters: [],
   });
 
   function searchCharactersHandler(value) {
@@ -28,7 +28,6 @@ const Dashboard = () => {
 
   
   function sortCharactersHandler(value) {
-    console.log('value', value);
     if (value === 'dsc') {
       setCharacters({
         ...state,
@@ -48,7 +47,7 @@ const Dashboard = () => {
       .then(res => {
         setCharacters({ characters: res.results, allCharacters: res.results });
       })
-      .catch(e => console.log('error', e));
+      .catch(e => console.error('error', e));
   }, []);
 
   return (

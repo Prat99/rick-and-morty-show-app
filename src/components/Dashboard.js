@@ -7,7 +7,7 @@ import Sort from './Sort';
 const Dashboard = () => {
   const [state, setCharacters] = useState({
     characters: [],
-    allCharacters: [],
+    allCharacters: []
   });
 
   function searchCharactersHandler(value) {
@@ -26,7 +26,6 @@ const Dashboard = () => {
     }
   }
 
-  
   function sortCharactersHandler(value) {
     if (value === 'dsc') {
       setCharacters({
@@ -58,16 +57,13 @@ const Dashboard = () => {
             <div className={`row ${styles.topHeaderRow}`}>
               <div className="col-md-4 col-lg-4 col-sm-12 col-12">
                 <Search
-                  searchCharactersHandler={v => searchCharactersHandler(v)}
+                  searchCharactersHandler={searchCharactersHandler}
                 ></Search>
               </div>
               <div className="col-md-4 col-lg-4 col-sm-12 col-12">
-                <Sort
-                  sortCharactersHandler={v => sortCharactersHandler(v)}
-                ></Sort>
+                <Sort sortCharactersHandler={sortCharactersHandler}></Sort>
               </div>
             </div>
-
             <div className="row">
               {state.characters && state.characters.length > 0 ? (
                 state.characters.map(character => (
